@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encrypted Rock Paper Scissors</title>
+    <meta name="description" content="Rock-paper-scissors where both moves stay encrypted onchain. Built on Fhenix CoFHE." />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✊</text></svg>" />
+  </head>
+  <body>
+    <header class="top">
+      <div class="brand">
+        <span class="logo">✊✋✌️</span>
+        <div>
+          <h1>Encrypted Rock Paper Scissors</h1>
+          <p class="sub">Both moves stay encrypted onchain. Only the result is revealed.</p>
+        </div>
+      </div>
+      <button id="connectBtn" class="btn primary">Connect wallet</button>
+    </header>
+
+    <main>
+      <section class="card">
+        <h2>1. Pick your move</h2>
+        <p class="hint">Your move is encrypted in your browser before it is sent. Nobody can see it, not even the opponent.</p>
+        <div class="moves">
+          <button class="move" data-move="0"><span>✊</span>Rock</button>
+          <button class="move" data-move="1"><span>✋</span>Paper</button>
+          <button class="move" data-move="2"><span>✌️</span>Scissors</button>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>2. Start or join a game</h2>
+        <div class="row">
+          <button id="createBtn" class="btn primary" disabled>Create a new game</button>
+          <span id="pickHint" class="or">or join an open game below</span>
+        </div>
+        <div id="status" class="status" hidden></div>
+      </section>
+
+      <section class="card">
+        <div class="row space">
+          <h2>Games</h2>
+          <button id="refreshBtn" class="btn ghost">Refresh</button>
+        </div>
+        <div id="games" class="games"><p class="hint">Loading games…</p></div>
+      </section>
+
+      <section class="card">
+        <h2>🏆 Leaderboard</h2>
+        <p class="hint">Win = 3 pts · Draw = 1 pt · Loss = 0 pts</p>
+        <div id="board" class="board"><p class="hint">Loading…</p></div>
+      </section>
+    </main>
+
+    <footer>
+      Built on <a href="https://www.fhenix.io/" target="_blank" rel="noreferrer">Fhenix CoFHE</a> ·
+      Arbitrum Sepolia testnet ·
+      <a id="contractLink" target="_blank" rel="noreferrer">Contract</a>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
