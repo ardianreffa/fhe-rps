@@ -21,7 +21,7 @@ const RPC_URL = 'https://sepolia-rollup.arbitrum.io/rpc';
 const EXPLORER = 'https://sepolia.arbiscan.io';
 const GAMES_TO_SHOW = 20;
 // Public link used in "Share on X" posts (always the live site, even when testing locally)
-const SITE_URL = 'https://fhe-rps.vercel.app';
+const SITE_URL = 'https://fheint.vercel.app';
 
 const MOVES = ['✊', '✋', '✌️'];
 const STATUS = ['None', 'Waiting for opponent', 'Ready to reveal', 'Finished', 'Cancelled'];
@@ -362,10 +362,10 @@ function shareText(g: Game) {
   const won = (g.outcome === 1 && youA) || (g.outcome === 2 && !youA);
   const headline =
     g.outcome === 0
-      ? "It's a draw 🤝 in encrypted rock-paper-scissors ✊✋✌️"
+      ? "It's a draw 🤝 on FHEint, encrypted rock-paper-scissors ✊✋✌️"
       : won
-        ? 'I just won 🏆 a game of encrypted rock-paper-scissors ✊✋✌️'
-        : 'I just lost 😅 a game of encrypted rock-paper-scissors ✊✋✌️';
+        ? 'I just won 🏆 a round of FHEint, encrypted rock-paper-scissors ✊✋✌️'
+        : 'I just got outplayed 😅 on FHEint, encrypted rock-paper-scissors ✊✋✌️';
   return (
     `${headline}\n\n` +
     `Both moves stayed encrypted onchain, only the result was revealed 🔐\n\n` +
