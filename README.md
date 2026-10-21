@@ -1,10 +1,12 @@
-# Encrypted Rock Paper Scissors ✊✋✌️
+# FHEint ✊✋✌️
 
-Rock-paper-scissors where **both moves stay encrypted onchain**. The contract picks the winner without ever seeing either move, and only the result is revealed.
+*A feint is a move meant to deceive your opponent. On FHEint, nobody can read your move at all.*
+
+**FHEint** is rock-paper-scissors where **both moves stay encrypted onchain**. The contract picks the winner without ever seeing either move, and only the result is revealed.
 
 Built on [Fhenix CoFHE](https://www.fhenix.io/) (Fully Homomorphic Encryption coprocessor) on **Arbitrum Sepolia testnet**.
 
-- 🎮 **Play:** https://fhe-rps.vercel.app
+- 🎮 **Play:** https://fheint.vercel.app
 - 📜 **Contract (verified):** [`0xf2Ef8AfC552e046e78a784c9b651759dB58bb754`](https://sepolia.arbiscan.io/address/0xf2Ef8AfC552e046e78a784c9b651759dB58bb754#code)
 
 ## Why FHE?
