@@ -1,0 +1,10 @@
+node_modules
+.env
+.env.*
+dist
+.vercel
+artifacts
+cache
+typechain-types
+coverage
+deployments
